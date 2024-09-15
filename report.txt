@@ -1,0 +1,15 @@
+Pointers
+
+1. Both printing outputs are the same becuase we have used pointer to modify the value of the variable. If have modified the value of variable without pointer and then prin
+t it, if would show the old value.
+2. Both printing with pointers and printing array generate the same output, becuase we used pointers for modifing the array.
+3. The values of the variables are correctly updated becuase in the function parameters pointers are given, and not the simple variables.
+4. Double pointer is a pointer pointing to a single pointer, and single pointer points to the variable declared, so the outputs of both pointers are the same.
+
+Processes
+
+1. The program creates a child process using fork(), which prints its PID, while the parent process prints its own PID immediately without waiting for the child to finish, so the output can vary in order but will always include both process IDs. 
+2. The parent process creates two children and prints their PIDs, then waits for the first child to finish using wait() and for the second child using waitpid(), reporting their exit statuses. The exact order of output may vary due to the concurrent execution of the child processes.
+3.  atexit() can be used in real-world applications for garbage collection processes or when it is needed to save the current state of the program, or log the exit time of the program, etc. It is getting executed after the main program execution.
+4. In this program, the parent creates two child processes. Each child process exits with a specific status code. The parent waits for each child to finish and prints their exit statuses, showing how each child exited. 
+5. The output of this program will show that the parent process creates a child process. The parent process waits for the child to finish, reports the child's exit status, and then exits itself.
